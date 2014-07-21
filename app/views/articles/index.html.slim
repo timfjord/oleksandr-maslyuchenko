@@ -1,0 +1,46 @@
+section#inner-headline
+  .container
+    .row
+      .col-lg-12
+        ul.breadcrumb
+          li
+            = link_to root_path do
+              i.fa.fa-home
+            i.icon-angle-right
+          li.active = t :articles
+section#content
+  .container
+    .row
+      .col-lg-8
+        - @articles.each do |article|
+          article
+            .post-image
+              .post-heading
+                h3 = link_to article.title, article
+            - article.description.present?
+              p = truncate @article.description, 100
+            dl.dl-horizontal
+              dt = t :published_at
+              dd = [article.journal.name, article.year, article.journal_information].reject(&:blank?).join ', '
+              dt = t :authors, count: article.authors.count
+              dd = article.authors.map(&:short_name).join ', '
+            .bottom-article
+              ul.meta-post
+                li
+                  i.fa.fa-cloud-download>
+                  = link_to t(:download), '#'
+              = link_to article, class: 'pull-right' do
+                = t :read_more
+                i.fa.fa-angle-right<
+        #pagination
+          span.all Page 1 of 3
+          span.current 1
+          a.inactive href="#"  2
+          a.inactive href="#"  3
+      .col-lg-4
+        aside.right-sidebar
+          .widget
+            form.form-search
+              input.form-control placeholder="Search.." type="text" 
+          .widget
+            h5.widgetheading Filter

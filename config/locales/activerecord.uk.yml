@@ -1,0 +1,39 @@
+uk:
+  activerecord:
+    models:
+      author:
+        zero: Автора
+        one: Автор
+        other: Автори
+        few: Авторів
+      journal:
+        zero: Журнала
+        one: Журнал
+        other: Журнали
+        few: Журналів
+      article:
+        zero: Статті
+        one: Стаття
+        other: Статті
+        few: Статті
+      admin_user:
+        zero: Адміністртора
+        one: Адміністртор
+        other: Адміністртори
+        few: Адміністртори
+    attributes:
+      author: 
+        first_name: Ім’я
+        middle_name: По-батькові
+        middle_name: Прізвище
+      journal:
+        name: Назва
+      article:
+        title: Назва
+        year: Рік
+        description: Опис
+        comments: Коментарі
+        file: Файл
+        authors: Автори
+        journal: Журнал
+        journal_information: "Том, номер і сторінка"

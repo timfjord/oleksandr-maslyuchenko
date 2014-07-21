@@ -1,0 +1,12 @@
+header
+  .navbar.navbar-default.navbar-static-top
+    .container
+      .navbar-header
+        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to t(:title), root_path, class: 'navbar-brand hidden-xs'
+        = link_to t(:title_short), root_path, class: 'navbar-brand visible-xs'
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav = render 'menu'

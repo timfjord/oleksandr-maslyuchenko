@@ -1,0 +1,7 @@
+en:
+  active_admin:
+    globalize:
+      translations: Translations
+      language:
+        en: English
+        uk: Ukrainian

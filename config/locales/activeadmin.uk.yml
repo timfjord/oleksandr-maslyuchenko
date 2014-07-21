@@ -1,0 +1,16 @@
+uk:
+  active_admin:
+    resource:
+      edit:
+        article_details: Дані статті
+        journal_details: Дані журналу
+        author_details: Дані автора
+      new:
+        article_details: Дані статті
+        journal_details: Дані журналу
+        author_details: Дані автора
+    globalize:
+      translations: Переклади
+      language:
+        en: Англійська
+        uk: Українська

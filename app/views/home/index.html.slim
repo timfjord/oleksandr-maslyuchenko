@@ -1,0 +1,12 @@
+section#featured
+  .container
+    .row
+      .col-lg-12
+        #main-slider.flexslider
+          ul.slides
+            li
+              = image_tag 'slides/1.jpg'
+              .flex-caption = t '.description'
+              
+section.callaction
+  .container = t '.about'
