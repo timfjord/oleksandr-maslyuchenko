@@ -29,6 +29,8 @@ module OleksandrMaslyuchenko
 
     config.i18n.available_locales = [:uk, :en]
 
+    config.assets.initialize_on_precompile = true
+
     config.generators do |g|
       g.assets false
       g.stylesheets false
