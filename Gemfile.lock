@@ -16,19 +16,19 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/stefanoverna/activeadmin-globalize.git
-  revision: 5bf8a4609f8e56749248721ac41e06d61cb6d851
-  specs:
-    activeadmin-globalize (1.0.0)
-      activeadmin
-      globalize (~> 4.0.0)
-
-GIT
   remote: git://github.com/svenfuchs/i18n-active_record.git
   revision: 2d9a22b6a4e5d809782cdbfa65b14d9e47aa27fc
   specs:
     i18n-active_record (0.0.2)
       i18n (>= 0.5.0)
+
+GIT
+  remote: git://github.com/yevhene/activeadmin-globalize.git
+  revision: 2a946794c07b74ee0fb2dd0fdf243938df1a26ec
+  specs:
+    activeadmin-globalize (1.0.0)
+      activeadmin
+      globalize (~> 4.0.0)
 
 GEM
   remote: https://rubygems.org/
