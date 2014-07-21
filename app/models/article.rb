@@ -8,6 +8,8 @@ class Article < ActiveRecord::Base
 
   translates :title, :description, :comments
 
+  mount_uploader :file, PdfUploader
+
   active_admin_translates :title, :description, :comments do
     validates :title, presence: true
   end

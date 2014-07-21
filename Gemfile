@@ -54,5 +54,6 @@ gem 'i18n-active_record', github: 'svenfuchs/i18n-active_record', require: 'i18n
 gem 'friendly_id', '~> 5.0.2'
 gem 'carrierwave'
 gem 'fog'
-gem 'rmagick'
 gem 'globalize'
+gem 'fog'
+gem 'figaro'

@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require jquery.flexslider
+//= require general
 //= require homepage
 

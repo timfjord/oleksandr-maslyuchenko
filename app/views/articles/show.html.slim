@@ -17,11 +17,12 @@ section#content
         article
           .post-image
             .post-heading
-              h3 
-                = @article.title
-                a.btn.btn-info.pull-right
+              - if @article.file?
+                = link_to @article.file.url, class: 'btn btn-info pull-right' do
                   i.fa.fa-cloud-download>
                   = t :download
+              h3 
+                = @article.title
           - @article.description.present?
             p = @article.description
           dl.dl-horizontal

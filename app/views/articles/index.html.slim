@@ -26,9 +26,10 @@ section#content
               dd = article.authors.map(&:short_name).join ', '
             .bottom-article
               ul.meta-post
-                li
-                  i.fa.fa-cloud-download>
-                  = link_to t(:download), '#'
+                - if article.file?
+                  li
+                    i.fa.fa-cloud-download>
+                    = link_to t(:download), article.file.url, target: '_blank'
               = link_to article, class: 'pull-right' do
                 = t :read_more
                 i.fa.fa-angle-right<
