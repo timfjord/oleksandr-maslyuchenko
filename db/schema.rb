@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20140721063617) do
     t.string   "locale",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "name"
+    t.string   "name"
   end
 
   add_index "journal_translations", ["journal_id"], name: "index_journal_translations_on_journal_id", using: :btree
