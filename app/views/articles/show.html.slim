@@ -23,13 +23,13 @@ section#content
                   = t :download
               h3 
                 = @article.title
-          - @article.description.present?
+          - if @article.description.present?
             p = @article.description
           dl.dl-horizontal
             dt = t :published_at
             dd = [@article.journal.name, @article.year, @article.journal_information].reject(&:blank?).join ', '
             dt = t :authors, count: @article.authors.count
             dd = @article.authors.map(&:short_name).join ', '
-          - @article.comments.present?
+          - if @article.comments.present?
             h4 = t :comments
             p = @article.comments

@@ -17,8 +17,8 @@ section#content
             .post-image
               .post-heading
                 h3 = link_to article.title, article
-            - article.description.present?
-              p = truncate @article.description, 100
+            - if article.description.present?
+              p = truncate article.description, length: 100
             dl.dl-horizontal
               dt = t :published_at
               dd = [article.journal.name, article.year, article.journal_information].reject(&:blank?).join ', '
