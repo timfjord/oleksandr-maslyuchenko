@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Article, focus: true do
+describe Article do
   it { should have_many :author_articles }
   it { should have_many(:authors).through :author_articles }
   it { should belong_to :journal }

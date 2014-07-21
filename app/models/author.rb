@@ -11,11 +11,11 @@ class Author < ActiveRecord::Base
   end
 
   def name
-    [first_name, middle_name, last_name].compact.join ' '
+    [first_name, middle_name, last_name].reject(&:blank?).join ' '
   end
 
   def short_name
-    initials = [first_name, middle_name].compact.map { |n| "#{n[0]}." }
+    initials = [first_name, middle_name].reject(&:blank?).map { |n| "#{n[0]}." }
     (initials << last_name).join ' '
   end
 end
