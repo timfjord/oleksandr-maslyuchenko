@@ -9,6 +9,8 @@ uk:
   authors:
     one: Автор
     other: Автори
+    few: Автори
+    many: Автори
   read_more: Детальніше
   download: Завантажити
   published_at: Опубліковано

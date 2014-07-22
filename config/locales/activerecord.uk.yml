@@ -6,21 +6,25 @@ uk:
         one: Автор
         other: Автори
         few: Авторів
+        many: Авторів
       journal:
         zero: Журнала
         one: Журнал
         other: Журнали
         few: Журналів
+        many: Журналів
       article:
         zero: Статті
         one: Стаття
         other: Статті
         few: Статті
+        many: Стеттей
       admin_user:
         zero: Адміністртора
         one: Адміністртор
         other: Адміністртори
-        few: Адміністртори
+        few: Адміністрторів
+        many: Адміністрторів
     attributes:
       author: 
         first_name: Ім’я

@@ -9,6 +9,8 @@ en:
   authors:
     one: Author
     other: Authors
+    few: Authors
+    many: Authors
   read_more: Details
   download: Download
   published_at: Published
