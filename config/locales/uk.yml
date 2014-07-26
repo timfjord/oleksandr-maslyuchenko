@@ -1,4 +1,5 @@
 uk:
+  locale_name: Українська
   title: Сайт Олександра Маслюченка
   title_short: Сайт О.Маслюченка
   contacts: Контакти
@@ -15,3 +16,5 @@ uk:
   download: Завантажити
   published_at: Опубліковано
   comments: Коментарі
+  choose_your_language: Виберіть мову
+  remove: Видалити

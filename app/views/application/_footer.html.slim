@@ -1,14 +1,20 @@
 footer
   .container
     .row
-      .col-lg-6
+      .col-lg-4
         .widget
           h5.widgetheading = t :contacts
           = t :contact_information_html
-      .col-lg-6
+      .col-lg-4
         .widget
           h5.widgetheading = t :pages
           ul.link-list = render 'menu'
+      .col-lg-4
+        .widget
+          h5.widgetheading = t :choose_your_language
+          ul.link-list
+            - I18n.available_locales.each do |locale|
+              li = link_to t(:locale_name, locale: locale), params.merge(locale: locale)
   #sub-footer
     .container
       .row

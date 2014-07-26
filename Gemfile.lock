@@ -179,6 +179,7 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
+    http_accept_language (2.0.1)
     i18n (0.6.11)
     inflecto (0.0.2)
     inherited_resources (1.4.1)
@@ -363,6 +364,7 @@ DEPENDENCIES
   friendly_id (~> 5.0.2)
   globalize
   guard-rspec
+  http_accept_language
   i18n-active_record!
   jbuilder (~> 2.0)
   jquery-rails

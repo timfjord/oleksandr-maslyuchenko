@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721063617) do
+ActiveRecord::Schema.define(version: 20140726064809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,13 +50,15 @@ ActiveRecord::Schema.define(version: 20140721063617) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "article_translations", force: true do |t|
-    t.integer  "article_id",  null: false
-    t.string   "locale",      null: false
+    t.integer  "article_id", null: false
+    t.string   "locale",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
-    t.text     "description"
-    t.text     "comments"
+    t.text     "abstract"
+    t.text     "keywords"
+    t.text     "reference"
+    t.string   "pages"
   end
 
   add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id", using: :btree
@@ -65,13 +67,16 @@ ActiveRecord::Schema.define(version: 20140721063617) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.integer  "year"
-    t.text     "description"
-    t.text     "comments"
-    t.string   "file"
+    t.text     "abstract"
+    t.text     "keywords"
     t.integer  "journal_id"
-    t.string   "journal_information"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "reference"
+    t.string   "pages"
+    t.string   "volume"
+    t.string   "issue"
+    t.text     "links"
   end
 
   add_index "articles", ["journal_id"], name: "index_articles_on_journal_id", using: :btree
@@ -106,6 +111,16 @@ ActiveRecord::Schema.define(version: 20140721063617) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "documents", force: true do |t|
+    t.integer  "article_id"
+    t.string   "name"
+    t.string   "file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "documents", ["article_id"], name: "index_documents_on_article_id", using: :btree
 
   create_table "journal_translations", force: true do |t|
     t.integer  "journal_id", null: false

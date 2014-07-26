@@ -11,25 +11,19 @@ section#inner-headline
 section#content
   .container
     .row
-      .col-lg-8
+      .col-lg-12
         - @articles.each do |article|
           article
             .post-image
               .post-heading
                 h3 = link_to article.title, article
-            - if article.description.present?
-              p = truncate article.description, length: 100
             dl.dl-horizontal
               dt = t :published_at
-              dd = [article.journal.name, article.year, article.journal_information].reject(&:blank?).join ', '
+              dd = [article.journal.try(:name), article.year, article.pages, article.volume, article.issue].reject(&:blank?).join ', '
               dt = t :authors, count: article.authors.count
               dd = article.authors.map(&:short_name).join ', '
             .bottom-article
               ul.meta-post
-                - if article.file?
-                  li
-                    i.fa.fa-cloud-download>
-                    = link_to t(:download), article.file.url, target: '_blank'
               = link_to article, class: 'pull-right' do
                 = t :read_more
                 i.fa.fa-angle-right<
@@ -38,7 +32,7 @@ section#content
           span.current 1
           a.inactive href="#"  2
           a.inactive href="#"  3
-      .col-lg-4
+      .col-lg-4 style="display: none"
         aside.right-sidebar
           .widget
             form.form-search

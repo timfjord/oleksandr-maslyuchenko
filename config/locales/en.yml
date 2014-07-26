@@ -1,4 +1,5 @@
 en:
+  locale_name: English
   title: Oleksandr Maslyuchenko's personal website
   title_short: O.Maslyuchenko's website
   contacts: Contacts
@@ -15,3 +16,5 @@ en:
   download: Download
   published_at: Published
   comments: Коментарі
+  choose_your_language: Choose your language
+  remove: Remove

@@ -25,6 +25,12 @@ uk:
         other: Адміністртори
         few: Адміністрторів
         many: Адміністрторів
+      document:
+        zero: Файлів
+        one: Файл
+        other: Файлів
+        few: Файлів
+        many: Файів
     attributes:
       author: 
         first_name: Ім’я
@@ -35,9 +41,16 @@ uk:
       article:
         title: Назва
         year: Рік
-        description: Опис
-        comments: Коментарі
-        file: Файл
+        abstract: Опис
+        keywords: Ключові слова
+        reference: Посилання
         authors: Автори
+        documents: Файли
         journal: Журнал
-        journal_information: "Том, номер і сторінка"
+        pages: Сторінки
+        volume: Том
+        issue: Номер
+        links: Ссилки
+      document:
+        name: Назва
+        file: Файл

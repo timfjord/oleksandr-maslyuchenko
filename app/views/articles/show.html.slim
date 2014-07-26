@@ -17,19 +17,28 @@ section#content
         article
           .post-image
             .post-heading
-              - if @article.file?
-                = link_to @article.file.url, class: 'btn btn-info pull-right' do
-                  i.fa.fa-cloud-download>
-                  = t :download
               h3 
                 = @article.title
-          - if @article.description.present?
-            p = @article.description
+          - if @article.documents.present?
+            p
+              - @article.documents.each do |document|
+                = link_to document.file.url, class: 'btn btn-info', target: '_blank' do
+                  i.fa.fa-cloud-download>
+                  = document.name
+          - if @article.abstract.present?
+            p = @article.abstract
           dl.dl-horizontal
             dt = t :published_at
-            dd = [@article.journal.name, @article.year, @article.journal_information].reject(&:blank?).join ', '
+            dd = [@article.journal.try(:name), @article.year, @article.pages, @article.volume, @article.issue].reject(&:blank?).join ', '
             dt = t :authors, count: @article.authors.count
             dd = @article.authors.map(&:short_name).join ', '
-          - if @article.comments.present?
-            h4 = t :comments
-            p = @article.comments
+          - if @article.keywords.present?
+            h4 = Article.human_attribute_name :keywords
+            p = @article.keywords
+          - if @article.reference.present?
+            h4 = Article.human_attribute_name :reference
+            p = @article.reference
+          - if @article.links.present?
+            h4 = Article.human_attribute_name :links
+            p = @article.links
+          

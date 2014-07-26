@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe Article do
+  it { should have_many :documents }
   it { should have_many :author_articles }
   it { should have_many(:authors).through :author_articles }
   it { should belong_to :journal }
 
   it { should validate_presence_of :title }
   it { should validate_presence_of :year }
+  it { should validate_presence_of :journal }
   it do
     should validate_numericality_of(:year)
       .only_integer
