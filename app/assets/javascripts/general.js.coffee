@@ -1,13 +1,17 @@
+toggleScrollup = ->
+  if $(window).scrollTop() > 100
+    $('.scrollup').fadeIn()
+  else
+    $('.scrollup').fadeOut()
+
 ready = ->
-  $(window).scroll ->
-    if $(this).scrollTop() > 100
-      $('.scrollup').fadeIn()
-    else
-      $('.scrollup').fadeOut()
+  $(window).scroll toggleScrollup
 
   $('.scrollup').click ->
     $('html, body').animate scrollTop: 0, 1000
-    return false
+    false
+
+  toggleScrollup()
 
 $ ready
 $(document).on 'page:load', ready
