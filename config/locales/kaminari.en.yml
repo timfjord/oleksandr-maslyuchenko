@@ -1,0 +1,4 @@
+en:
+  views:
+    pagination:
+      total: "Page %{current} of %{from}"

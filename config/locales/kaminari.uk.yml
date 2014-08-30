@@ -1,0 +1,4 @@
+uk:
+  views:
+    pagination:
+      total: "Сторінка %{current} з %{from}"

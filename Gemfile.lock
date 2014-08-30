@@ -368,6 +368,7 @@ DEPENDENCIES
   i18n-active_record!
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   pg
   poltergeist
   rails (= 4.1.4)

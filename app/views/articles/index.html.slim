@@ -27,11 +27,7 @@ section#content
               = link_to article, class: 'pull-right' do
                 = t :read_more
                 i.fa.fa-angle-right<
-        #pagination
-          span.all Page 1 of 3
-          span.current 1
-          a.inactive href="#"  2
-          a.inactive href="#"  3
+        = paginate @articles if @articles.present?
       .col-lg-4 style="display: none"
         aside.right-sidebar
           .widget
