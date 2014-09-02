@@ -40,5 +40,5 @@ section#content
             p = @article.reference
           - if @article.links.present?
             h4 = Article.human_attribute_name :links
-            p = @article.links
+            p = format_links(@article.links)
           
