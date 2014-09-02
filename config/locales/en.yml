@@ -5,7 +5,6 @@ en:
   contacts: Contacts
   pages: Pages
   copyright_html: All right reserved &copy; 2014
-  home: Home
   articles: Articles
   authors:
     one: Author
@@ -18,3 +17,8 @@ en:
   comments: Коментарі
   choose_your_language: Choose your language
   remove: Remove
+  home:
+    title: Home
+    index:
+      description_html: '<div><h3>Oleksandr Maslyuchenko<h3><p>Doctor physical and mathematical science</p></div>'
+  contact_information_html: '<ul class="link-list"><li><b>Email:</b> ovmasl@gmail.com</li></ul>'

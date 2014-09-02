@@ -11,11 +11,8 @@ html
     #wrapper
       = render 'header'
       
-      - if cookies[:debug]
-        = yield
-      
-        = render 'footer'
-      - else
-        h1.text-center style="margin-top: 100px" Ми працюємо над сайтом :-)
+      = yield
+    
+      = render 'footer'
       
     a.scrollup href="#": i.fa.fa-angle-up.active

@@ -5,7 +5,6 @@ uk:
   contacts: Контакти
   pages: Сторінки
   copyright_html: Всі права зареєстровані &copy; 2014
-  home: Домашня
   articles: Статті
   authors:
     one: Автор
@@ -18,3 +17,8 @@ uk:
   comments: Коментарі
   choose_your_language: Виберіть мову
   remove: Видалити
+  home:
+    title: Домашня
+    index:
+      description_html: '<div><h3>Олександр Маслюченко<h3><p>Доктор фізико-математичних наук</p></div>'
+  contact_information_html: '<ul class="link-list"><li><b>Пошта:</b> ovmasl@gmail.com</li></ul>'
