@@ -10,10 +10,9 @@ CarrierWave.configure do |config|
   else
     config.storage = :fog
     config.fog_credentials = {
-      provider: 'AWS',
-      aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-      aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-      region: 'eu-west-1'
+      provider: 'Google',
+      google_storage_access_key_id: ENV['GCS_ACCESS_KEY_ID'],
+      google_storage_secret_access_key: ENV['GCS_SECRET_ACCESS_KEY'],
     }
     config.fog_directory  = ENV['FOG_MEDIA_DIRECTORY']
   end
